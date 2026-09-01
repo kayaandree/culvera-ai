@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Culvera AI | Our Mission, Vietnam Pilot &amp; Founders</title>
+  <meta
+    name="description"
+    content="Culvera AI gives smallholder farmers access to the decision intelligence normally reserved for large agricultural organizations. Learn our mission, why we started in Vietnam, and meet the founding team."
+  />
+  <link rel="canonical" href="about.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <!-- Reused for the static/light header variant and the editorial intro
+       block styles (.contact-hero*) — see css/contact.css for both. -->
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/about-sections.css" />
+</head>
+<body class="contact-page">
+
+  <header class="site-header site-header--static">
+    <a class="site-header__brand" href="index.html">
+      <img
+        class="site-header__logo"
+        src="assets/images/logo-gold.png"
+        alt=""
+      />
+      <span class="site-header__wordmark">CULVERA AI</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="index.html#demo">DEMO</a>
+      <a href="about.html" aria-current="page">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================================================================
+         About hero — short editorial framing. The page's one <h1>.
+         ================================================================ -->
+    <section class="contact-hero about-hero contact-section">
+      <div class="contact-hero__inner">
+        <p class="contact-hero__eyebrow">ABOUT</p>
+        <h1 class="contact-hero__title">About Culvera AI</h1>
+        <p class="contact-hero__body">
+          The mission, the reasoning behind our first market, and the team
+          building it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Culvera, Why Vietnam, Our Goal, tech statement and founders are
+         the same shared sections/content used on the homepage — see
+         js/data/site-content.js and js/data/founders.js. -->
+    <section data-why-culvera></section>
+    <section data-why-vietnam></section>
+    <section data-goals></section>
+    <section data-tech-statement></section>
+    <section data-founders></section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="js/components/why-culvera.js"></script>
+  <script type="module" src="js/components/why-vietnam.js"></script>
+  <script type="module" src="js/components/goals-section.js"></script>
+  <script type="module" src="js/components/tech-statement.js"></script>
+  <script type="module" src="js/components/founder-grid.js"></script>
+  <script type="module" src="js/footer.js"></script>
+</body>
+</html>

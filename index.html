@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culvera AI — Farming Intelligence For Everyone</title>
+  <meta
+    name="description"
+    content="Culvera AI gives Vietnamese smallholder farmers the same decision intelligence multinational agribusinesses use to plan entire supply chains."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/about-sections.css" />
+</head>
+<body data-hero-stage="initial">
+
+  <!-- ==================================================================
+       Permanent site header — hidden until the intro reaches "header".
+       Transparent background by design so the hero video shows through.
+       ================================================================== -->
+  <header class="site-header">
+    <a class="site-header__brand" href="index.html">
+      <img
+        class="site-header__logo"
+        src="assets/images/logo-white.png"
+        alt=""
+      />
+      <span class="site-header__wordmark">CULVERA AI</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="#demo">DEMO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================================================================
+         Hero
+         ================================================================ -->
+    <section class="hero" data-hero id="hero">
+      <video
+        class="hero__video"
+        data-hero-video
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+      >
+        <source src="assets/video/hero-banner.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero__scrim"></div>
+
+      <div class="hero__centerstage">
+        <img
+          class="hero__logo"
+          src="assets/images/logo-gold.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="hero__wordmark" aria-hidden="true">CULVERA AI</div>
+      </div>
+
+      <!-- Real, always-present heading for assistive tech / SEO — the
+           animated wordmark above is purely decorative (aria-hidden). -->
+      <h1 class="visually-hidden">Culvera AI — Farming Intelligence For Everyone</h1>
+    </section>
+
+    <!-- ================================================================
+         Why Culvera — concise homepage introduction. Also the landing
+         spot for the hero's first-play auto-scroll. Full content lives in
+         js/data/site-content.js and is shared with the About page.
+         ================================================================ -->
+    <section data-why-culvera data-hero-scroll-target></section>
+
+    <!-- Why Vietnam -->
+    <section data-why-vietnam></section>
+
+    <!-- Our Goal -->
+    <section data-goals></section>
+
+    <!-- Restrained one-line technology statement -->
+    <section data-tech-statement></section>
+
+    <!-- Meet our founders -->
+    <section data-founders></section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="js/hero.js"></script>
+  <script type="module" src="js/header-scroll-mode.js"></script>
+  <script type="module" src="js/components/why-culvera.js"></script>
+  <script type="module" src="js/components/why-vietnam.js"></script>
+  <script type="module" src="js/components/goals-section.js"></script>
+  <script type="module" src="js/components/tech-statement.js"></script>
+  <script type="module" src="js/components/founder-grid.js"></script>
+  <script type="module" src="js/footer.js"></script>
+</body>
+</html>
