@@ -19,7 +19,7 @@
 }
 
 .section-inner {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding-left: clamp(1.5rem, 4vw, 3rem);
   padding-right: clamp(1.5rem, 4vw, 3rem);
@@ -44,7 +44,7 @@
 }
 
 .why-culvera__inner {
-  max-width: 46rem;
+  max-width: 54rem;
 }
 
 .why-culvera-section .eyebrow {
@@ -52,8 +52,8 @@
 }
 
 .why-culvera__heading {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(2rem, 4.5vw, 3rem);
   line-height: 1.2;
   color: var(--color-navy);
@@ -78,7 +78,7 @@
 /* Make Culvera's short standalone line ("...help close that gap.") read as
    its own beat rather than blending into the paragraph above/below it. */
 .why-culvera__body p:nth-child(2) {
-  font-family: var(--font-wordmark);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   color: var(--color-field-green-deep);
   opacity: 1;
@@ -97,17 +97,31 @@
 
 .why-vietnam__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(2.5rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 4.2fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
   align-items: start;
+  margin-top: clamp(2rem, 5vw, 3rem);
 }
 
 .why-vietnam__heading {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   color: var(--color-navy);
   margin: 0;
+  max-width: 44rem;
+}
+
+/* Small, uncropped photo — kept at its natural portrait shape and its own
+   natural height rather than stretched to match the text column. */
+.why-vietnam__media {
+  margin: 0;
+}
+
+.why-vietnam__media img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .why-vietnam__body {
@@ -122,13 +136,17 @@
   color: var(--color-navy);
   opacity: 0.82;
   margin: 0;
-  max-width: 42rem;
+  max-width: 48rem;
 }
 
 @media (max-width: 800px) {
   .why-vietnam__grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
+  }
+
+  .why-vietnam__media {
+    max-width: 16rem;
   }
 }
 
@@ -143,7 +161,7 @@
 
 .goals__intro {
   text-align: center;
-  max-width: 42rem;
+  max-width: 48rem;
   margin-bottom: clamp(3rem, 6vw, 4.5rem);
 }
 
@@ -152,8 +170,8 @@
 }
 
 .goals__statement {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   line-height: 1.25;
   color: var(--color-navy);
@@ -182,8 +200,8 @@
 }
 
 .goal__title {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: 1.3rem;
   color: var(--color-navy);
   margin: 0 0 0.75rem;
@@ -248,7 +266,7 @@
 
 .founders__intro {
   text-align: center;
-  max-width: 40rem;
+  max-width: 46rem;
   margin: 0 auto clamp(3rem, 6vw, 4.5rem);
 }
 
@@ -257,8 +275,8 @@
 }
 
 .founders__heading {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   color: var(--color-navy);
   margin: 0 0 1rem;
@@ -274,7 +292,7 @@
 }
 
 .founders__grid {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.5rem, 4vw, 3rem);
   display: grid;
@@ -311,8 +329,8 @@
 }
 
 .founder-card__name {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: 1.25rem;
   color: var(--color-navy);
   text-align: center;

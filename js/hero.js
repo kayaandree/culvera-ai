@@ -18,6 +18,7 @@ const STAGE_SEQUENCE = [
   "logo-out",
   "wordmark-gold",
   "wordmark-white",
+  "tagline",
   "header",
   "done",
 ];
@@ -79,6 +80,11 @@ class HeroIntro {
         return (
           readCssDurationMs("--hero-wordmark-color-shift", 1300) +
           readCssDurationMs("--hero-wordmark-hold", 750)
+        );
+      case "tagline":
+        return (
+          readCssDurationMs("--hero-tagline-fade-in", 1000) +
+          readCssDurationMs("--hero-tagline-hold", 900)
         );
       case "header":
         return readCssDurationMs("--hero-header-transition", 950);

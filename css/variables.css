@@ -9,23 +9,27 @@
 
 :root {
   /* ---------- Brand palette ---------- */
-  --color-gold: #cda45e;
-  --color-gold-bright: #e8c88a;
-  --color-white: #ffffff;
+  --color-gold: #c5a052;
+  --color-gold-bright: #d9bc80;
+  --color-turquoise: #48c6c2;
+  --color-sand: #ded5c4;
+  --color-charcoal: #263238;
   --color-black: #0b0b0a;
   --color-ink: #14130f;
 
   /* Extended palette — footer, interior pages (contact, about, etc.) */
-  --color-navy: #1e2a35;
-  --color-navy-deep: #141c24;
+  --color-navy: #142e46;
+  --color-navy-deep: #0e2033;
   --color-field-green: #59785a;
   --color-field-green-deep: #46603f;
   --color-ivory: #f5f1e8;
   --color-ivory-dim: rgba(245, 241, 232, 0.55); /* decorative use only — never body text */
   --color-neutral-warm: #e3dac6; /* muted warm neutral — image/photo placeholders only */
 
-  /* ---------- Typography ---------- */
-  --font-wordmark: "Cormorant Garamond", "Times New Roman", serif;
+  /* ---------- Typography ----------
+     Headings: Montserrat Light everywhere (brand wordmark included).
+     Body/nav/UI text: Inter. */
+  --font-heading: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif;
   --font-nav: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
   --wordmark-tracking: 0.28em;
   --nav-tracking: 0.18em;
@@ -59,6 +63,11 @@
   --hero-wordmark-scale-from: 0.92;
   --hero-wordmark-scale-to: 1;
 
+  /* Phase 2b — tagline ("Farming intelligence for the decisions that
+     matter."), same centered spot, fades in as the wordmark fades out */
+  --hero-tagline-fade-in: 1000ms;
+  --hero-tagline-hold: 900ms;
+
   /* Phase 3 — collapse into the permanent header */
   --hero-header-transition: 950ms;
 
@@ -86,6 +95,9 @@
     --hero-wordmark-hold: 300ms;
     --hero-wordmark-scale-from: 1;
     --hero-wordmark-scale-to: 1;
+
+    --hero-tagline-fade-in: 400ms;
+    --hero-tagline-hold: 300ms;
 
     --hero-header-transition: 400ms;
   }

@@ -12,7 +12,8 @@
      logo-out       -> logo fades out (continues a slight scale-up)
      wordmark-gold  -> "CULVERA AI" fades in, centered, in brand gold
      wordmark-white -> wordmark shifts colour from gold to white, then holds
-     header         -> wordmark fades out; header brand + nav fade in
+     tagline        -> wordmark fades out; the tagline fades in, centered
+     header         -> tagline fades out; header brand + nav fade in
      done           -> resting state, identical visually to "header"
    ========================================================================== */
 
@@ -70,7 +71,8 @@
 }
 
 .hero__logo,
-.hero__wordmark {
+.hero__wordmark,
+.hero__tagline {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -106,8 +108,8 @@ body[data-hero-stage="done"] .hero__logo {
 }
 
 .hero__wordmark {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(2.1rem, 5.5vw, 4.25rem);
   letter-spacing: var(--wordmark-tracking);
   white-space: nowrap;
@@ -131,20 +133,48 @@ body[data-hero-stage="wordmark-gold"] .hero__wordmark {
 
 body[data-hero-stage="wordmark-white"] .hero__wordmark {
   opacity: 1;
-  color: var(--color-white);
+  color: var(--color-ivory);
   transform: translate(-50%, -50%) scale(var(--hero-wordmark-scale-to));
   transition: color var(--hero-wordmark-color-shift) var(--ease-in-out-cinematic);
 }
 
-/* header / done: wordmark dissolves back out, mirroring the logo's exit */
+/* tagline and every stage after it: wordmark dissolves back out, mirroring
+   the logo's exit */
+body[data-hero-stage="tagline"] .hero__wordmark,
 body[data-hero-stage="header"] .hero__wordmark,
 body[data-hero-stage="done"] .hero__wordmark {
   opacity: 0;
-  color: var(--color-white);
+  color: var(--color-ivory);
   transform: translate(-50%, -50%) scale(calc(var(--hero-wordmark-scale-to) * 1.06));
+  transition:
+    opacity var(--hero-tagline-fade-in) var(--ease-out-cinematic),
+    transform var(--hero-tagline-fade-in) var(--ease-out-cinematic);
+}
+
+/* The tagline shares the wordmark's exact centered spot and fades in as
+   the wordmark fades out. */
+.hero__tagline {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3vw, 1.9rem);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: var(--color-ivory);
+  text-align: center;
+  max-width: min(90vw, 40rem);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.97);
   transition:
     opacity var(--hero-header-transition) var(--ease-out-cinematic),
     transform var(--hero-header-transition) var(--ease-out-cinematic);
+}
+
+body[data-hero-stage="tagline"] .hero__tagline {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition:
+    opacity var(--hero-tagline-fade-in) var(--ease-out-cinematic),
+    transform var(--hero-tagline-fade-in) var(--ease-out-cinematic);
 }
 
 /* ---------------------------------------------------------------------- */
@@ -213,11 +243,11 @@ body[data-hero-stage="done"] .site-header__nav {
 }
 
 .site-header__wordmark {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: 1.15rem;
   letter-spacing: 0.22em;
-  color: var(--color-white);
+  color: var(--color-ivory);
   white-space: nowrap;
 }
 
@@ -232,7 +262,7 @@ body[data-hero-stage="done"] .site-header__nav {
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: var(--nav-tracking);
-  color: var(--color-white);
+  color: var(--color-ivory);
   opacity: 0.9;
   transition: opacity 220ms var(--ease-out-cinematic);
 }

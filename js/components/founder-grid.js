@@ -6,11 +6,13 @@
  */
 import { foundersSectionContent, founders } from "../data/founders.js";
 
-function renderFounderCard(founder) {
+function renderFounderCard(founder, index) {
+  const frameNumber = String(index + 1).padStart(2, "0");
   const photo = founder.image
     ? `<img class="founder-card__photo" src="${founder.image}" alt="Portrait of ${founder.name}" />`
-    : `<div class="founder-card__photo founder-card__photo--placeholder" role="img" aria-label="${founder.name} — founder photo placeholder">
-         <span>Photo placeholder</span>
+    : `<div class="founder-card__photo founder-card__photo--placeholder media-frame" role="img" aria-label="Photo ${frameNumber}, ${founder.name}, portrait to be added">
+         <span class="media-frame__number">${frameNumber}</span>
+         <span class="media-frame__label">Photo ${frameNumber}<br />${founder.name} portrait</span>
        </div>`;
 
   return `
@@ -25,6 +27,10 @@ function renderFounderCard(founder) {
 function renderFounderGrid(members) {
   return `<div class="founders__grid">${members.map(renderFounderCard).join("")}</div>`;
 }
+
+/* Frame numbers here are Photo 01, 02, 03 (founder portraits). See
+   README.md for the full numbered list of every image placeholder on the
+   site and where each one goes. */
 
 function render(content, members) {
   return `

@@ -26,6 +26,11 @@ body.contact-page {
   background: rgba(245, 241, 232, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(30, 42, 53, 0.08);
+  /* hero.css defaults .site-header to pointer-events: none and only
+     re-enables it for body[data-hero-stage="header"|"done"] — which only
+     ever exists on index.html. Every page using this static variant needs
+     its own override, or the header is genuinely unclickable. */
+  pointer-events: auto;
 }
 
 .site-header--static .site-header__brand,
@@ -58,9 +63,86 @@ body.contact-page {
 /* ---------------------------------------------------------------------- */
 
 .contact-section {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---------------------------------------------------------------------- */
+/* About page — full-bleed photo hero with overlaid text                   */
+/* ---------------------------------------------------------------------- */
+
+.about-photo-hero {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-photo-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.about-photo-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-photo-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 32, 51, 0.75) 0%,
+    rgba(14, 32, 51, 0.4) 45%,
+    rgba(14, 32, 51, 0.75) 100%
+  );
+}
+
+.about-photo-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 66rem;
+  text-align: center;
+  padding: clamp(6rem, 12vw, 9rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.about-photo-hero__eyebrow {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: var(--nav-tracking);
+  color: var(--color-gold-bright);
+  margin: 0 0 1.25rem;
+}
+
+.about-photo-hero__title {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+  line-height: 1.15;
+  color: var(--color-ivory);
+  margin: 0 0 1.5rem;
+}
+
+.about-photo-hero__body {
+  font-family: var(--font-nav);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-ivory);
+  opacity: 0.92;
+  margin: 0 auto 1.25rem;
+  max-width: 46rem;
+}
+
+.about-photo-hero__body:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -74,7 +156,7 @@ body.contact-page {
 }
 
 .contact-hero__inner {
-  max-width: 46rem;
+  max-width: 66rem;
   margin: 0 auto;
 }
 
@@ -88,8 +170,8 @@ body.contact-page {
 }
 
 .contact-hero__title {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(2.2rem, 4.8vw, 3.4rem);
   line-height: 1.15;
   color: var(--color-navy);
@@ -120,7 +202,7 @@ body.contact-page {
   color: var(--color-navy);
   opacity: 0.82;
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: 46rem;
 }
 
 .contact-hero__links {
@@ -156,8 +238,8 @@ body.contact-page {
 }
 
 .contact-info__heading {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(1.6rem, 3vw, 2rem);
   color: var(--color-navy);
   margin: 0 0 1rem;
@@ -366,8 +448,8 @@ body.contact-page {
 }
 
 .faq-section__heading {
-  font-family: var(--font-wordmark);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   color: var(--color-navy);
   margin: 0 0 0.85rem;
@@ -380,7 +462,7 @@ body.contact-page {
   color: var(--color-navy);
   opacity: 0.78;
   text-align: center;
-  max-width: 40rem;
+  max-width: 46rem;
   margin: 0 auto 3rem;
 }
 
@@ -461,5 +543,5 @@ body.contact-page {
   opacity: 0.82;
   margin: 0;
   padding: 0 0.15rem 1.5rem;
-  max-width: 42rem;
+  max-width: 48rem;
 }

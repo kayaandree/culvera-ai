@@ -7,7 +7,7 @@
  * disappears automatically — no other change needed.
  */
 export const foundersSectionContent = {
-  eyebrow: "THE TEAM",
+  eyebrow: "THE PEOPLE BUILDING CULVERA",
   heading: "Meet our founders",
   intro:
     "Culvera began as a university research project and is now being developed by a multidisciplinary founding team focused on applying AI to real agricultural challenges.",
@@ -17,16 +17,16 @@ export const founders = [
   {
     name: "Kaya Kelly",
     image: null,
-    bio: "[Short biography placeholder — approximately 2–4 sentences.]",
+    bio: "[Short biography placeholder, approximately 2 to 4 sentences.]",
   },
   {
     name: "Giulio Robilliard",
     image: null,
-    bio: "[Short biography placeholder — approximately 2–4 sentences.]",
+    bio: "[Short biography placeholder, approximately 2 to 4 sentences.]",
   },
   {
     name: "Otis Springer",
     image: null,
-    bio: "[Short biography placeholder — approximately 2–4 sentences.]",
+    bio: "[Short biography placeholder, approximately 2 to 4 sentences.]",
   },
 ];

@@ -31,8 +31,8 @@ function renderContactColumn(contact) {
       <h3 class="site-footer__heading">${contact.heading}</h3>
       <ul class="site-footer__list">
         <li><a href="mailto:${contact.email}">${contact.email}</a></li>
-        <li>${contact.location}</li>
-        <li><a href="${contact.linkedin.href}">${contact.linkedin.label}</a></li>
+        <li><a href="${contact.linkedin.href}" target="_blank" rel="noopener">${contact.linkedin.label}</a></li>
+        <li><a href="${contact.instagram.href}" target="_blank" rel="noopener">${contact.instagram.label}</a></li>
       </ul>
     </div>
   `;

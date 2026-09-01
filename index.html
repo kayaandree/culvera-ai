@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Culvera AI — Farming Intelligence For Everyone</title>
+  <title>Culvera AI | Agricultural Decision Intelligence</title>
   <meta
     name="description"
-    content="Culvera AI gives Vietnamese smallholder farmers the same decision intelligence multinational agribusinesses use to plan entire supply chains."
+    content="Culvera turns climate, soil, satellite and market data into practical farm level decision support, starting with smallholder agriculture in Vietnam."
   />
+  <link rel="canonical" href="index.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 
@@ -21,6 +22,7 @@
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/about-sections.css" />
+  <link rel="stylesheet" href="css/site-sections.css" />
 </head>
 <body data-hero-stage="initial">
 
@@ -38,7 +40,7 @@
       <span class="site-header__wordmark">CULVERA AI</span>
     </a>
     <nav class="site-header__nav" aria-label="Primary">
-      <a href="#demo">DEMO</a>
+      <a href="demo.html">DEMO</a>
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </nav>
@@ -70,42 +72,405 @@
           aria-hidden="true"
         />
         <div class="hero__wordmark" aria-hidden="true">CULVERA AI</div>
+        <p class="hero__tagline" aria-hidden="true">Farming intelligence for the decisions that matter.</p>
       </div>
 
       <!-- Real, always-present heading for assistive tech / SEO — the
            animated wordmark above is purely decorative (aria-hidden). -->
-      <h1 class="visually-hidden">Culvera AI — Farming Intelligence For Everyone</h1>
+      <h1 class="visually-hidden">Culvera AI, farming intelligence for the decisions that matter</h1>
     </section>
 
     <!-- ================================================================
-         Why Culvera — concise homepage introduction. Also the landing
-         spot for the hero's first-play auto-scroll. Full content lives in
-         js/data/site-content.js and is shared with the About page.
+         Hero support copy, sits below the video (not overlaid on it)
          ================================================================ -->
-    <section data-why-culvera data-hero-scroll-target></section>
+    <section class="hero-support" data-hero-scroll-target>
+      <div class="hero-support__inner">
+        <p class="hero-support__body">
+          Culvera turns climate, soil, satellite and market data into practical farm level
+          decision support, helping growers make better informed choices about crops,
+          inputs, timing, risk and expected outcomes.
+        </p>
+        <a class="button button--dark" href="#how-it-works">How Culvera Works</a>
+      </div>
 
-    <!-- Why Vietnam -->
-    <section data-why-vietnam></section>
+      <!-- Hero visualization: field/map outline with data layers converging
+           toward a single recommendation. Built directly in HTML/CSS below,
+           no image asset needed. -->
+      <div class="data-convergence" aria-hidden="true">
+        <div class="data-convergence__inputs">
+          <span class="data-convergence__tag">SOIL</span>
+          <span class="data-convergence__tag">CLIMATE</span>
+          <span class="data-convergence__tag">VEGETATION</span>
+          <span class="data-convergence__tag">MARKET</span>
+          <span class="data-convergence__tag">FARM DATA</span>
+        </div>
+        <div class="data-convergence__lines"></div>
+        <div class="data-convergence__core">DECISION INTELLIGENCE</div>
+        <div class="data-convergence__lines data-convergence__lines--out"></div>
+        <div class="data-convergence__card">
+          <span class="data-convergence__card-label">RECOMMENDATION</span>
+          <span class="data-convergence__card-title">Suggested next step</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Our Goal -->
-    <section data-goals></section>
+    <!-- ================================================================
+         Section 2 — The Problem
+         ================================================================ -->
+    <section class="site-section site-section--navy" aria-labelledby="problem-heading">
+      <div class="site-section__intro site-section__intro--center section-inner">
+        <p class="eyebrow">THE INFORMATION GAP</p>
+        <h2 class="site-section__heading" id="problem-heading">
+          High stakes farming decisions are still made with fragmented information.
+        </h2>
+        <p class="site-section__body">
+          Vietnam is one of the world's major agricultural producers and exporters. Yet many
+          smallholder farmers still make decisions about planting, fertiliser, irrigation,
+          harvest timing and sales without access to the forecasting and analytical tools
+          available to larger agricultural businesses.
+        </p>
+        <p class="site-section__body">
+          Climate volatility, changing soil conditions, input costs, market uncertainty and
+          increasingly complex export requirements make those decisions even harder.
+        </p>
+        <p class="site-section__body">Culvera is being built to close that information gap.</p>
+      </div>
 
-    <!-- Restrained one-line technology statement -->
-    <section data-tech-statement></section>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <span class="problem-card__index">01</span>
+          <h3 class="problem-card__title">CLIMATE UNCERTAINTY</h3>
+          <p class="problem-card__body">Extreme weather can change planting and harvest conditions quickly.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-card__index">02</span>
+          <h3 class="problem-card__title">SOIL AND INPUT DECISIONS</h3>
+          <p class="problem-card__body">Farmers need practical guidance from soil information, not another dashboard of raw measurements.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-card__index">03</span>
+          <h3 class="problem-card__title">MARKET UNCERTAINTY</h3>
+          <p class="problem-card__body">The crop that performs agronomically is not always the crop that produces the strongest economic outcome.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-card__index">04</span>
+          <h3 class="problem-card__title">COMPLIANCE RISK</h3>
+          <p class="problem-card__body">For export crops, quality and residue requirements can determine whether an otherwise successful harvest reaches its intended market.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Meet our founders -->
-    <section data-founders></section>
+    <!-- ================================================================
+         Section 3 — What Culvera Does
+         ================================================================ -->
+    <section class="site-section site-section--divider site-section--band-light" aria-labelledby="what-heading">
+      <div class="site-section__intro site-section__intro--center section-inner">
+        <p class="eyebrow">FROM DATA TO DECISIONS</p>
+        <h2 class="site-section__heading" id="what-heading">One decision layer across the farm.</h2>
+        <p class="site-section__body">
+          Culvera brings environmental, agronomic and market information together so users
+          can move from asking "what is happening?" to "what should I consider doing next?"
+        </p>
+      </div>
+
+      <div class="capability-list">
+        <div class="capability">
+          <h3 class="capability__title">CROP AND SEASON SUITABILITY</h3>
+          <p class="capability__body">Assess which supported crops are better matched to a location and planting season.</p>
+        </div>
+        <div class="capability">
+          <h3 class="capability__title">SOIL AWARE INPUT PLANNING</h3>
+          <p class="capability__body">Translate soil characteristics into more contextual fertiliser and soil management guidance.</p>
+        </div>
+        <div class="capability">
+          <h3 class="capability__title">CLIMATE RISK</h3>
+          <p class="capability__body">Identify weather conditions that may affect planting, irrigation or harvest decisions.</p>
+        </div>
+        <div class="capability">
+          <h3 class="capability__title">YIELD AND HARVEST PLANNING</h3>
+          <p class="capability__body">Estimate potential yield ranges and help identify more appropriate harvest windows.</p>
+        </div>
+        <div class="capability">
+          <h3 class="capability__title">MARKET CONTEXT</h3>
+          <p class="capability__body">Add market and price information to agronomic recommendations so decisions are not made on yield alone.</p>
+        </div>
+      </div>
+
+      <p class="site-section__cta">
+        <a class="site-section__link" href="demo.html">See the platform in action &rarr;</a>
+      </p>
+    </section>
+
+    <!-- ================================================================
+         Section 4 — How Culvera Works
+         ================================================================ -->
+    <section class="site-section" id="how-it-works" aria-labelledby="how-it-works-heading">
+      <div class="site-section__intro site-section__intro--center section-inner">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2 class="site-section__heading" id="how-it-works-heading">Complex data in. Clear decisions out.</h2>
+      </div>
+
+      <div class="step-pipeline">
+        <div class="step">
+          <span class="step__index">STEP 01</span>
+          <h3 class="step__title">LOCATE</h3>
+          <p class="step__body">A user selects or enters a farm location.</p>
+        </div>
+        <div class="step">
+          <span class="step__index">STEP 02</span>
+          <h3 class="step__title">UNDERSTAND</h3>
+          <p class="step__body">Culvera assembles relevant environmental and agricultural information, including weather, soil and satellite derived vegetation signals.</p>
+        </div>
+        <div class="step">
+          <span class="step__index">STEP 03</span>
+          <h3 class="step__title">ANALYSE</h3>
+          <p class="step__body">Machine learning models and agronomic logic evaluate crop suitability, potential yield, seasonal risk and other decision factors.</p>
+        </div>
+        <div class="step">
+          <span class="step__index">STEP 04</span>
+          <h3 class="step__title">ACT</h3>
+          <p class="step__body">The platform converts the analysis into understandable recommendations, risk indicators and planning information.</p>
+        </div>
+      </div>
+
+      <div class="section-inner site-section__followup">
+        <p class="site-section__body">
+          Current prototype data sources include NASA POWER weather data, SoilGrids soil
+          information and Sentinel2 satellite imagery. Culvera is designed to combine global
+          data infrastructure with increasingly local field data as pilots progress.
+        </p>
+        <p class="site-section__cta">
+          <a class="site-section__link" href="demo.html">Explore the technology &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Section 5 — Current Field Focus (Vietnam / cadmium)
+         ================================================================ -->
+    <section class="site-section field-focus" aria-labelledby="field-focus-heading">
+      <div class="site-section__intro site-section__intro--center section-inner">
+        <p class="eyebrow">CURRENT FIELD FOCUS &middot; VIETNAM</p>
+        <h2 class="site-section__heading" id="field-focus-heading">Helping turn cadmium risk into an earlier decision.</h2>
+        <p class="site-section__body">
+          In Dong Thap, durian growers, cooperatives and exporters face a problem that begins
+          long before fruit reaches the border.
+        </p>
+        <p class="site-section__body">
+          Cadmium uptake is influenced by soil chemistry, particularly acidic conditions, as
+          well as fertiliser and farm management practices. Yet export testing often occurs
+          only after significant time and money have already been invested in the crop.
+        </p>
+        <p class="site-section__body">
+          Culvera is developing a cadmium risk decision layer designed to help identify
+          higher risk orchard blocks earlier, support more targeted testing and give growers
+          and supply chain partners more time to act before harvest.
+        </p>
+      </div>
+
+      <div class="field-focus__columns">
+        <div class="field-focus__column">
+          <h3 class="field-focus__column-title">IDENTIFY RISK EARLIER</h3>
+          <p class="field-focus__column-body">Combine farm, soil, management and environmental information to identify where additional attention may be needed.</p>
+        </div>
+        <div class="field-focus__column">
+          <h3 class="field-focus__column-title">PRIORITISE TESTING</h3>
+          <p class="field-focus__column-body">Use risk information to support smarter decisions about where laboratory testing is most valuable.</p>
+        </div>
+        <div class="field-focus__column">
+          <h3 class="field-focus__column-title">SUPPORT INTERVENTION</h3>
+          <p class="field-focus__column-body">Help translate measurements such as soil pH and laboratory results into clearer management and remediation decisions.</p>
+        </div>
+      </div>
+
+      <!-- Abstract orchard block risk map, not a photograph and not a real
+           measurement, purely illustrative. -->
+      <div class="risk-map" role="img" aria-label="Illustrative map of orchard blocks colour coded as low risk, review, or testing recommended">
+        <div class="risk-map__grid">
+          <div class="risk-map__block risk-map__block--low"></div>
+          <div class="risk-map__block risk-map__block--low"></div>
+          <div class="risk-map__block risk-map__block--review"></div>
+          <div class="risk-map__block risk-map__block--low"></div>
+          <div class="risk-map__block risk-map__block--test"></div>
+          <div class="risk-map__block risk-map__block--low"></div>
+          <div class="risk-map__block risk-map__block--review"></div>
+          <div class="risk-map__block risk-map__block--low"></div>
+          <div class="risk-map__block risk-map__block--low"></div>
+          <div class="risk-map__block risk-map__block--test"></div>
+          <div class="risk-map__block risk-map__block--review"></div>
+          <div class="risk-map__block risk-map__block--low"></div>
+        </div>
+        <div class="risk-map__legend">
+          <span class="risk-map__legend-item"><span class="risk-map__legend-swatch risk-map__legend-swatch--low"></span>Low Risk</span>
+          <span class="risk-map__legend-item"><span class="risk-map__legend-swatch risk-map__legend-swatch--review"></span>Review</span>
+          <span class="risk-map__legend-item"><span class="risk-map__legend-swatch risk-map__legend-swatch--test"></span>Testing Recommended</span>
+        </div>
+        <p class="risk-map__caption">Illustrative example. Not derived from live orchard data.</p>
+      </div>
+
+      <div class="field-focus__callout">
+        <p class="field-focus__callout-title">LAB DATA REMAINS ESSENTIAL</p>
+        <p class="field-focus__callout-body">
+          Culvera does not claim that satellite imagery or public soil datasets directly
+          measure cadmium. Laboratory soil and fruit measurements remain essential. Our role
+          is to combine ground truth measurements with environmental, spatial and farm
+          management data to improve decision support around cadmium risk.
+        </p>
+      </div>
+
+      <p class="site-section__cta">
+        <a class="site-section__link site-section__link--gold" href="about.html">Learn why we&rsquo;re starting in Vietnam &rarr;</a>
+      </p>
+    </section>
+
+    <!-- ================================================================
+         Section 6 — Built for more than one user
+         ================================================================ -->
+    <section class="site-section site-section--divider" aria-labelledby="audience-heading">
+      <div class="site-section__intro site-section__intro--center section-inner">
+        <p class="eyebrow">A SHARED DECISION LAYER</p>
+        <h2 class="site-section__heading" id="audience-heading">Built for farmers. Useful across the agricultural system.</h2>
+        <p class="site-section__body">
+          Better farm level information becomes more valuable when it can also support the
+          organisations farmers already depend on.
+        </p>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3 class="audience-card__title">FARMERS</h3>
+          <p class="audience-card__body">Practical guidance that turns complex data into understandable next actions.</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-card__title">COOPERATIVES</h3>
+          <p class="audience-card__body">Better visibility across member farms and stronger coordination around production, risk and testing.</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-card__title">EXPORTERS AND PACKING PARTNERS</h3>
+          <p class="audience-card__body">Earlier insight into supply conditions and potential compliance risk.</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-card__title">RESEARCH AND EXTENSION PARTNERS</h3>
+          <p class="audience-card__body">A structured way to connect field observations, agronomic expertise and real world outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Section 7 — Women in Agriculture (moved here from the About page)
+         ================================================================ -->
+    <section class="site-section site-section--divider" id="women-in-agriculture" aria-labelledby="women-heading">
+      <div class="site-section__intro site-section__intro--center section-inner">
+        <p class="eyebrow">DESIGNED WITH ADOPTION IN MIND</p>
+        <h2 class="site-section__heading" id="women-heading">Building around how women farmers already learn and innovate.</h2>
+      </div>
+
+      <div class="section-inner">
+        <div class="photo-text-grid photo-text-grid--gentle-crop">
+          <figure class="photo-text-grid__media">
+            <img src="assets/images/photography/market-vendor.jpg" alt="A vendor sorting fresh vegetables at a Vietnamese market" />
+          </figure>
+          <div class="photo-text-grid__body">
+        <p class="site-section__body">
+          Women account for nearly half of Vietnam's agricultural workforce and play a
+          central role in the day to day operation of farms and rural households.
+        </p>
+        <p class="site-section__body">
+          Yet access to agricultural technology, formal advisory networks, finance and
+          decision making authority is not always distributed equally.
+        </p>
+        <p class="site-section__body">
+          Research in Vietnam also shows something important for technology design: women
+          and men do not necessarily encounter or adopt agricultural innovation in the same
+          way.
+        </p>
+        <p class="site-section__body">
+          Women often exchange agricultural knowledge through family members, neighbouring
+          farmers and trusted community relationships, while formal agricultural institutions
+          may play a larger role in how men encounter new technologies.
+        </p>
+        <p class="site-section__body">
+          Climate and economic shocks can intensify the need for this support. When men
+          migrate for wage work, women may be left managing agricultural production
+          alongside household and caregiving responsibilities.
+        </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-inner site-section__intro site-section__intro--center" style="margin-top: 3rem; max-width: none;">
+        <h3 class="site-section__heading site-section__subheading">What this means for Culvera</h3>
+      </div>
+
+      <div class="principle-grid" style="margin-bottom: 3rem;">
+        <div class="principle-card">
+          <h3 class="principle-card__title">COMMUNITY FIRST PILOTS</h3>
+          <p class="principle-card__body">We aim to work with trusted women lead farmers, community organisations and women's networks so new practices can spread through relationships that already exist.</p>
+        </div>
+        <div class="principle-card">
+          <h3 class="principle-card__title">PEER TO PEER LEARNING</h3>
+          <p class="principle-card__body">Successful recommendations should be easy to share between farmers rather than remaining locked inside an individual account.</p>
+        </div>
+        <div class="principle-card">
+          <h3 class="principle-card__title">INCREMENTAL ACTION</h3>
+          <p class="principle-card__body">Recommendations should favour clear, practical changes that can be introduced and evaluated step by step.</p>
+        </div>
+        <div class="principle-card">
+          <h3 class="principle-card__title">ACCESS BEYOND THE SMARTPHONE</h3>
+          <p class="principle-card__body">As Culvera moves into field pilots, we are exploring offline first and SMS supported delivery for areas where connectivity or smartphone access may be limited.</p>
+        </div>
+      </div>
+
+      <!-- Network diagram: information flowing from a local partner through
+           to Culvera's own learning loop. Built directly in HTML/CSS. -->
+      <div class="network-diagram" role="img" aria-label="Diagram showing information flowing from local partner to lead farmer to peer network to households and farms to field outcomes and back into the Culvera learning loop">
+        <div class="network-diagram__node">LOCAL PARTNER</div>
+        <span class="network-diagram__arrow">&darr;</span>
+        <div class="network-diagram__node">LEAD FARMER</div>
+        <span class="network-diagram__arrow">&darr;</span>
+        <div class="network-diagram__node">PEER NETWORK</div>
+        <span class="network-diagram__arrow">&darr;</span>
+        <div class="network-diagram__node">HOUSEHOLDS / FARMS</div>
+        <span class="network-diagram__arrow">&darr;</span>
+        <div class="network-diagram__node">FIELD OUTCOMES</div>
+        <span class="network-diagram__arrow">&darr;</span>
+        <div class="network-diagram__node network-diagram__node--final">CULVERA LEARNING LOOP</div>
+      </div>
+
+      <div class="section-inner site-section__prose site-section__prose--tight">
+        <p class="site-section__body">
+          Inclusive design is not a separate feature of Culvera. It is part of whether the
+          platform can work at all.
+        </p>
+        <p class="site-section__body">
+          If agricultural intelligence is intended for smallholder farming, it has to reflect
+          the social systems through which farming knowledge is actually shared.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Section 8 — Final CTA
+         ================================================================ -->
+    <section class="cta-band site-section">
+      <div class="cta-band__inner">
+        <h2 class="cta-band__heading">See what agricultural decision intelligence can look like.</h2>
+        <p class="cta-band__body">
+          Explore the Culvera prototype and see how location, soil, climate and satellite
+          information can become practical farm level guidance.
+        </p>
+        <div class="cta-band__actions">
+          <a class="button button--primary" href="demo.html">Preview the Demo</a>
+          <a class="button button--secondary" href="contact.html">Partner With Us</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="site-footer"></footer>
 
   <script type="module" src="js/hero.js"></script>
   <script type="module" src="js/header-scroll-mode.js"></script>
-  <script type="module" src="js/components/why-culvera.js"></script>
-  <script type="module" src="js/components/why-vietnam.js"></script>
-  <script type="module" src="js/components/goals-section.js"></script>
-  <script type="module" src="js/components/tech-statement.js"></script>
-  <script type="module" src="js/components/founder-grid.js"></script>
   <script type="module" src="js/footer.js"></script>
 </body>
 </html>

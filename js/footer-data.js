@@ -17,27 +17,27 @@ export const footerData = {
     {
       heading: "Explore",
       links: [
-        { label: "Demo", href: "index.html#demo" },
+        { label: "Demo", href: "demo.html" },
         { label: "About", href: "about.html" },
-        { label: "Research", href: "#" },
+        { label: "Research", href: "about.html" },
         { label: "Contact", href: "contact.html" },
       ],
     },
     {
       heading: "Research",
       links: [
-        { label: "Vietnam Pilot", href: "#" },
-        { label: "Research Partnerships", href: "#" },
-        { label: "Technology", href: "#" },
+        { label: "Vietnam Pilot", href: "about.html" },
+        { label: "Research Partnerships", href: "contact.html" },
+        { label: "Technology", href: "demo.html" },
       ],
     },
   ],
 
   contact: {
     heading: "Contact",
-    email: "hello@culvera.ai",
-    location: "[Location Placeholder]",
-    linkedin: { label: "[LinkedIn Placeholder]", href: "#" },
+    email: "culveraai@gmail.com",
+    linkedin: { label: "LinkedIn", href: "https://www.linkedin.com/company/culveraai" },
+    instagram: { label: "Instagram", href: "https://www.instagram.com/culveraai" },
   },
 
   legal: {
