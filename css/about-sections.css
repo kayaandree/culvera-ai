@@ -87,7 +87,7 @@
 }
 
 /* ---------------------------------------------------------------------- */
-/* Why Vietnam — two columns, heading left / copy right                    */
+/* Why Vietnam — full-width heading, small photo left / centered copy right */
 /* ---------------------------------------------------------------------- */
 
 .why-vietnam-section {
@@ -97,7 +97,7 @@
 
 .why-vietnam__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 4.2fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3.4fr);
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: start;
   margin-top: clamp(2rem, 5vw, 3rem);
@@ -108,8 +108,9 @@
   font-weight: 300;
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   color: var(--color-navy);
-  margin: 0;
+  margin: 0 auto;
   max-width: 44rem;
+  text-align: center;
 }
 
 /* Small, uncropped photo — kept at its natural portrait shape and its own
@@ -127,6 +128,7 @@
 .why-vietnam__body {
   display: grid;
   gap: 1.4rem;
+  text-align: center;
 }
 
 .why-vietnam__body p {
@@ -135,7 +137,7 @@
   line-height: 1.75;
   color: var(--color-navy);
   opacity: 0.82;
-  margin: 0;
+  margin: 0 auto;
   max-width: 48rem;
 }
 

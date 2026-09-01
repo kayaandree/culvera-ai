@@ -1125,10 +1125,10 @@
   display: block;
 }
 
-/* Photo left, text right — e.g. Women in Agriculture */
+/* Photo left, text right — e.g. Our Story */
 .photo-text-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: stretch;
 }
@@ -1169,7 +1169,7 @@
    ever forcing an exact pixel match. */
 .photo-text-grid--gentle-crop {
   grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
-  align-items: start;
+  align-items: center;
 }
 
 .photo-text-grid--gentle-crop .photo-text-grid__media {
@@ -1185,22 +1185,11 @@
 }
 
 .photo-text-grid--gentle-crop .photo-text-grid__body {
-  align-content: start;
+  align-content: center;
 }
 
 .photo-text-grid--reverse.photo-text-grid--gentle-crop {
   grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-}
-
-/* Image-left gentle-crop (e.g. Designed With Adoption In Mind): the photo
-   is shorter than the text block next to it, so it reads better vertically
-   centered against the text rather than pinned to the top. */
-.photo-text-grid--gentle-crop:not(.photo-text-grid--reverse) {
-  align-items: center;
-}
-
-.photo-text-grid--gentle-crop:not(.photo-text-grid--reverse) .photo-text-grid__body {
-  align-content: center;
 }
 
 @media (max-width: 800px) {
